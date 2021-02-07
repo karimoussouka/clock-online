@@ -1,0 +1,122 @@
+body {
+    background: wheat;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clock {
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(197, 233, 238);
+    background-size: cover;
+    border-radius: 50%;
+    border: 14px solid rgb(112, 66, 5);
+    position: relative;
+}
+
+#retateNumbers {
+    transform: rotate(180deg);
+}
+
+#retateNumber3_9 {
+    transform: rotate(90deg);
+}
+
+.clock #number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.clock .number1 {
+    transform: rotate(30deg);
+}
+
+.clock .number2 {
+    transform: rotate(60deg);
+}
+
+.clock .number3 {
+    transform: rotate(90deg);
+}
+
+.clock .number4 {
+    transform: rotate(120deg);
+}
+
+.clock .number5 {
+    transform: rotate(150deg);
+}
+
+.clock .number6 {
+    transform: rotate(180deg);
+}
+
+.clock .number7 {
+    transform: rotate(210deg);
+}
+
+.clock .number8 {
+    transform: rotate(240deg);
+}
+
+.clock .number9 {
+    transform: rotate(270deg);
+}
+
+.clock .number10 {
+    transform: rotate(300deg);
+}
+
+.clock .number11 {
+    transform: rotate(330deg);
+}
+
+.clock .sec,
+.clock .minute,
+.clock .hour {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.clock .sec {
+    background-color: red !important;
+    width: 3px;
+    height: 45%;
+    --rotation: 0;
+}
+
+.clock .minute {
+    background-color: black !important;
+    width: 6px;
+    height: 40%;
+    z-index: 1;
+}
+
+.clock .hour {
+    background-color: black !important;
+    width: 9px;
+    height: 35%;
+    z-index: 1;
+}
+
+.clock .point {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border: black solid 1px;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
